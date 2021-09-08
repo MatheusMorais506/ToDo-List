@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Todo from './To-Do';
-import TodoForm from './To-Do-Form';
+import TD from './TD';
+import TDForm from './TDForm';
 
 function TodoList() {
   const [todos, setTodos] = useState(
@@ -51,8 +51,8 @@ function TodoList() {
   return (
     <>
       <h1>To-Do List</h1>
-      <TodoForm onSubmit={addTodo} />
-      <Todo
+      <TDForm onSubmit={addTodo} />
+      <TD
         todos={todos}
         completeTodo={completeTodo}
         removeTodo={removeTodo}

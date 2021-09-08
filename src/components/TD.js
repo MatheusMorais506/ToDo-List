@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineEdit, AiFillDelete } from 'react-icons/ai';
-import TodoForm from './To-Do-Form';
+import TDForm from './TDForm';
 
 function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
   const [edit, setEdit] = useState({
@@ -17,7 +17,7 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
   };
 
   if (edit.id) {
-    return <TodoForm edit={edit} onSubmit={submitUpdate} />;
+    return <TDForm edit={edit} onSubmit={submitUpdate} />;
   }
 
   return todos.map((todo, index) => (
